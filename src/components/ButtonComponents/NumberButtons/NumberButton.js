@@ -1,9 +1,14 @@
 import React from "react";
-import { tsPropertySignature } from "@babel/types";
 
-const NumberButton = props => {
+
+const NumberButton = (props) => {
+  // console.log(props.numbers);
   return (
-    <button> {props.number} </button>
+        <button className="clickedValue" 
+          onClick={() => 
+          props.setValue(props.numbers)}> 
+    {props.numbers}
+    </button>
   );
 };
 export default NumberButton;
